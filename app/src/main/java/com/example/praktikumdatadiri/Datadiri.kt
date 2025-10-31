@@ -53,7 +53,23 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
         modifier = modifier
             .fillMaxSize()
             .background(BackgroundLavender) // Latar belakang utama (lavender muda)
-    ) {
+
+
+    )
+    {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(HeaderPurple)
+                .padding(vertical = 20.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = "Formulir Pendaftaran",
+                color = Color.White,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold
+            )
         // Konten form akan ditambahkan di sini
     }
 }
