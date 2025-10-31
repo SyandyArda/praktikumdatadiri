@@ -92,6 +92,13 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                             onValueChange = { namaLengkap = it },
                             placeholder = "Isian nama lengkap"
                         )
+
+                        FormRadioGroup(
+                            label = "JENIS KELAMIN",
+                            options = jenisKelaminOptions,
+                            selectedOption = selectedJenisKelamin,
+                            onOptionSelected = { selectedJenisKelamin = it }
+                        )
                     }
                 } // Akhir Card
             }
