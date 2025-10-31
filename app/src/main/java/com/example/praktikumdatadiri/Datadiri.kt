@@ -99,6 +99,13 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                             selectedOption = selectedJenisKelamin,
                             onOptionSelected = { selectedJenisKelamin = it }
                         )
+
+                        FormRadioGroup(
+                            label = "STATUS PERKAWINAN",
+                            options = statusPerkawinanOptions,
+                            selectedOption = selectedStatusPerkawinan,
+                            onOptionSelected = { selectedStatusPerkawinan = it }
+                        )
                     }
                 } // Akhir Card
             }
