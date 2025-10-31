@@ -114,6 +114,18 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                         )
                     }
                 } // Akhir Card
+                Button(
+                    onClick = { /* Logika submit bisa ditambahkan di sini */ },
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = ButtonDefaults.buttonColors(containerColor = HeaderPurple),
+                    shape = RoundedCornerShape(8.dp)
+                ) {
+                    Text(
+                        text = "Submit",
+                        color = Color.White,
+                        fontSize = 16.sp,
+                        modifier = Modifier.padding(vertical = 8.dp)
+                    )
             }
         }
         @Composable
