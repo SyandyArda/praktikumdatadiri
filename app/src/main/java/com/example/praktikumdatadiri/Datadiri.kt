@@ -86,6 +86,12 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                 ) {
                     Column(modifier = Modifier.padding(24.dp)) {
                         // Semua field input (TextField, Radio) akan masuk di sini
+                        FormTextField(
+                            label = "NAMA LENGKAP",
+                            value = namaLengkap,
+                            onValueChange = { namaLengkap = it },
+                            placeholder = "Isian nama lengkap"
+                        )
                     }
                 } // Akhir Card
             }
