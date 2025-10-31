@@ -71,5 +71,24 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                 fontWeight = FontWeight.Bold
             )
         // Konten form akan ditambahkan di sini
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
+                    .verticalScroll(rememberScrollState()) // Agar bisa di-scroll jika form panjang
+            ) {
+                // 5. Card Putih untuk menampung field
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = FormWhite),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+                ) {
+                    Column(modifier = Modifier.padding(24.dp)) {
+                        // Semua field input (TextField, Radio) akan masuk di sini
+                    }
+                } // Akhir Card
+            }
+        }
     }
 }
