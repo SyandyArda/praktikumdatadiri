@@ -90,5 +90,29 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                 } // Akhir Card
             }
         }
+        @Composable
+        fun FormTextField(
+            label: String,
+            value: String,
+            onValueChange: (String) -> Unit,
+            placeholder: String
+        ) {
+            Column {
+                Text(
+                    text = label,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 12.sp,
+                    color = LabelGray
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                OutlinedTextField(
+                    value = value,
+                    onValueChange = onValueChange,
+                    label = { Text(placeholder) },
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(8.dp)
+                )
+            }
+        }
     }
 }
