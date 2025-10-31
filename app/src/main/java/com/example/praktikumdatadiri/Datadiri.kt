@@ -106,6 +106,12 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                             selectedOption = selectedStatusPerkawinan,
                             onOptionSelected = { selectedStatusPerkawinan = it }
                         )
+                        FormTextField(
+                            label = "ALAMAT",
+                            value = alamat,
+                            onValueChange = { alamat = it },
+                            placeholder = "Alamat"
+                        )
                     }
                 } // Akhir Card
             }
