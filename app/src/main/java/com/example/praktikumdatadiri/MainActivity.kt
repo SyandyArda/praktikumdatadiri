@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.praktikum3.ActivitasPertama
 import com.example.praktikumdatadiri.ui.theme.PraktikumdatadiriTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,8 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             PraktikumdatadiriTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                ActivitasPertama(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
