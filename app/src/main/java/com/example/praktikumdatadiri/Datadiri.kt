@@ -114,5 +114,40 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                 )
             }
         }
+        @Composable
+        fun FormRadioGroup(
+            label: String,
+            options: List<String>,
+            selectedOption: String,
+            onOptionSelected: (String) -> Unit
+        ) {
+            Column {
+                Text(
+                    text = label,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 12.sp,
+                    color = LabelGray
+                )
+                // Loop untuk setiap opsi
+                options.forEach { option ->
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onOptionSelected(option) } // Membuat seluruh baris bisa diklik
+                            .padding(vertical = 4.dp)
+                    ) {
+                        RadioButton(
+                            selected = (option == selectedOption),
+                            onClick = { onOptionSelected(option) }
+                        )
+                        Text(
+                            text = option,
+                            modifier = Modifier.padding(start = 4.dp)
+                        )
+                    }
+                }
+            }
+        }
     }
 }
