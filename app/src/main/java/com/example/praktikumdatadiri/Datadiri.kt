@@ -40,6 +40,8 @@ val LabelGray = Color.Gray
 
 @Composable
 fun ActivitasPertama(modifier: Modifier = Modifier) {
+    var namaLengkap by remember { mutableStateOf("") }
+    var alamat by remember { mutableStateOf("") }
     // 2. Struktur Layout Utama
     Column(
         modifier = modifier
