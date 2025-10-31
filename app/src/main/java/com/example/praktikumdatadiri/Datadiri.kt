@@ -37,3 +37,15 @@ val HeaderPurple = Color(0xFF9333EA)
 val BackgroundLavender = Color(0xFFF3E8FF)
 val FormWhite = Color.White
 val LabelGray = Color.Gray
+
+@Composable
+fun ActivitasPertama(modifier: Modifier = Modifier) {
+    // 2. Struktur Layout Utama
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .background(BackgroundLavender) // Latar belakang utama (lavender muda)
+    ) {
+        // Konten form akan ditambahkan di sini
+    }
+}
