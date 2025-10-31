@@ -42,6 +42,12 @@ val LabelGray = Color.Gray
 fun ActivitasPertama(modifier: Modifier = Modifier) {
     var namaLengkap by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
+
+    val jenisKelaminOptions = listOf("Laki-laki", "Perempuan")
+    var selectedJenisKelamin by remember { mutableStateOf("") } // Awalnya kosong
+
+    val statusPerkawinanOptions = listOf("Janda", "Lajang", "Duda")
+    var selectedStatusPerkawinan by remember { mutableStateOf("") } // Awalnya kosong
     // 2. Struktur Layout Utama
     Column(
         modifier = modifier
